@@ -1,9 +1,11 @@
-import *as React from "react";
+"use client";
 
-export default function ProjectPage() {
+import * as React from "react";
+import Project from "../components/projects";
+export default function Projects() {
   return (
-<div> 
-  <h1>Projects</h1>   
-    </div>
+    <>
+      <Project />
+    </>
   );
 }

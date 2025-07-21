@@ -6,10 +6,8 @@ export interface Project {
      demoLink: string;
      image: string;
 }
-export interface Blog {
+export interface Skills {
     title: string;
-    excerpt: string;
-    date: string;
-    readTime: string;
-    slug: string;
+    description: string;
+    image:string
 }

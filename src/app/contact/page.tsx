@@ -1,8 +1,12 @@
-import * as React from "react";
-export default function  ContactPage(){
-     return(
-          <>
-          <h1>Contact Page</h1>
-          </>
-     )
-}
+
+import * as React from 'react';
+import ContactPage from '../components/contact';
+export default function Contact() {
+  
+
+  return (
+    <>
+      <ContactPage />
+    </>      
+  )
+} 

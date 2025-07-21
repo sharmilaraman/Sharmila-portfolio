@@ -21,6 +21,8 @@ const navbar = () => {
   const menuItems = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
+    { href: "/skills", label: "Skills" },
+
     { href: "/projects", label: "Project" },
     { href: "/contact", label: "Contact" },
   ];
@@ -29,9 +31,9 @@ const navbar = () => {
       <div className="max-w-7xl container mx-auto px-4">
         {/* Desktop Menu */}
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold text-primary">
+          <Link href="/" className="uncial-antiqua-regular text-3xl font-bold text-primary">
             {" "}
-            Sharmila R
+            SHARMILA 
           </Link>
           {/* Desktop menus */}
           <div className="hidden md:flex space-x-8">
