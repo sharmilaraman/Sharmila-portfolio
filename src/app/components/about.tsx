@@ -98,7 +98,7 @@ export default function AboutPage() {
                     </p>
                   </div>
 
-                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                       React.js Trainee
                     </h3>
@@ -121,7 +121,7 @@ export default function AboutPage() {
 
               {activeTab === "education" && (
                 <>
-                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                       Bachelor of Engineering - ECE - 8.01
                     </h3>
@@ -148,7 +148,7 @@ export default function AboutPage() {
               )}
 
               {activeTab === "skills" && (
-                <div className="flex flex-wrap gap-2 md:gap-3">
+                <div className="bg-white dark:bg-gray-800 flex flex-wrap gap-2 md:gap-3 rounded-lg shadow-md p-6">
                   {[
                     "HTML",
                     "CSS",

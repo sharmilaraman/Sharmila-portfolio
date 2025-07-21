@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { fadeInUp, fadeIn, slideInLeft, slideInRight } from '@/utils/animations'
-
+import Link from 'next/link'
 interface FormData {
   name: string;
   email: string;
@@ -85,9 +85,9 @@ export default function Contact() {
               <FaEnvelope className="h-6 w-6 text-primary" />
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <a href="mailto:your.email@example.com" className="text-secondary hover:text-primary">
-                  your.email@example.com
-                </a>
+                <Link href="mailto:sharmila05122002@gmail.com" className="text-secondary hover:text-primary">
+                  sharmila05122002@gmail.com
+                </Link>
               </div>
             </motion.div>
             
@@ -100,9 +100,9 @@ export default function Contact() {
               <FaPhone className="h-6 w-6 text-primary" />
               <div>
                 <h3 className="font-semibold">Phone</h3>
-                <a href="tel:+1234567890" className="text-secondary hover:text-primary">
-                  +1 (234) 567-890
-                </a>
+                <Link href="tel:+916385547357" className="text-secondary hover:text-primary">
+                  +91 6385547357
+                </Link>
               </div>
             </motion.div>
             
@@ -115,7 +115,7 @@ export default function Contact() {
               <FaMapMarkerAlt className="h-6 w-6 text-primary" />
               <div>
                 <h3 className="font-semibold">Location</h3>
-                <p className="text-secondary">San Francisco, CA</p>
+                <p className="text-secondary">Chennai,India</p>
               </div>
             </motion.div>
           </motion.div>
@@ -141,10 +141,11 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
+                placeholder='Enter your name'
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-4 py-2 rounded-md border border-gray-300 placeholder:text-gray-600 dark:placeholder:text-white/50  dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
               />
             </motion.div>
             
@@ -156,10 +157,11 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
+                placeholder='Enter your email'
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-4 py-2 rounded-md placeholder:text-gray-600 dark:placeholder:text-white/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
               />
             </motion.div>
             
@@ -170,11 +172,12 @@ export default function Contact() {
               <textarea
                 id="message"
                 name="message"
+                placeholder='Enter a message'
                 value={formData.message}
                 onChange={handleChange}
                 required
                 rows={4}
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-4 py-2 rounded-md border placeholder:text-gray-600 dark:placeholder:text-white/50 border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
               />
             </motion.div>
             
