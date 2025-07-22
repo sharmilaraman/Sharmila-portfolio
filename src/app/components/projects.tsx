@@ -30,7 +30,8 @@ export default function Projects() {
             key={index}
             className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
             variants={fadeInUp}
-            {...cardHoverSmall}
+            whileHover={cardHoverSmall.whileHover}
+            // transition={cardHoverSmall.transition}
           >
             <motion.div 
               className="aspect-video bg-gray-200 dark:bg-gray-800"

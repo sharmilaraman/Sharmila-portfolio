@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Image from "next/image";
 import { skills } from "@/contents/skills";
 import { motion } from "framer-motion";
 import {fadeInDown, fadeInUp, staggerContainer, cardHoverSmall } from "@/utils/animations";
@@ -27,10 +28,10 @@ const Skills = () => {
             variants={fadeInUp}
             whileHover={cardHoverSmall.whileHover}
           >
-            <img
+            <Image
               src={skill.image}
-              alt={skill.title}
-              className="w-20 h-20 object-contain mb-4"
+              alt={skill.title} width={80} height={80}
+              className=" object-contain mb-4"
             />
             <h3 className="text-xl font-semibold text-cyan-400 mb-2">
               {skill.title}

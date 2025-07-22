@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { BriefcaseIcon } from "@heroicons/react/24/outline";
 import { GraduationCap, Code } from "lucide-react";
 import { motion } from 'framer-motion';

@@ -11,7 +11,7 @@ import { useTheme } from '../context/ThemeContext'
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-const navbar = () => {
+const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -110,4 +110,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;
