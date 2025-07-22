@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Sharmila R",
+  title: "Sharmila R | Portfolio",
 };
 
 export default function RootLayout({
@@ -26,12 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`bg-white transition-colors dark:bg-gray-900 dark:text-white ${geistSans.variable} ${geistMono.variable}`}>
+      <head>
+        <link rel="icon" type="image/jpeg" href="/projects/profile3.jpeg" />
+      </head>
+      <body
+        className={`bg-white transition-colors dark:bg-gray-900 dark:text-white ${geistSans.variable} ${geistMono.variable}`}
+      >
         <ThemeProvider>
           <Navbar />
-          <main className="min-h-screen pt-24">
-            {children}
-          </main>
+          <main className="min-h-screen pt-24">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
