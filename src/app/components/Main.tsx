@@ -1,3 +1,5 @@
+
+"use client"
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,10 +13,10 @@ const Main = () => {
   return (
     <section className="py-15 container max-w-7xl mx-auto px-4">
       <div className="max-w-3xl mx-auto text-center">
-        < motion.div
-          className="flex flex-col items-center mb-4 "
-          {...scaleIn}
-          transition={{ delay: 0.2 }}
+        <motion.div className='flex justify-center items-center mb-4'
+          initial={scaleIn.initial}
+          animate={scaleIn.animate}
+          transition={scaleIn.transition}
         >
           <Image
             src="/projects/profile.jpg"
@@ -26,7 +28,9 @@ const Main = () => {
         </motion.div>
         <motion.h1
           className="text-4xl md:text-6xl font-bold mb-4"
-          {...fadeInUp}
+          initial={fadeInUp.initial}
+          animate={fadeInUp.animate}
+          transition={fadeInUp.transition}
         >
           Hi, I&apos;m{" "}
           <motion.span className="text-primary" {...fadeIn}>
