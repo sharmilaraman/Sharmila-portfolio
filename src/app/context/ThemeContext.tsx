@@ -39,7 +39,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
+  if (!mounted) {    
     return null;
   }
 
