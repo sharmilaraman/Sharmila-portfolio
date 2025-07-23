@@ -41,7 +41,7 @@ const Main = () => {
           className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4"
           {...fadeInUp}
         >
-          Frontend Developer | React | Next.js
+          Frontend Developer | React | 
         </motion.p>
         <motion.div className="flex flex-wrap justify-center gap-2 mb-8"  {...fadeInUp}>
           <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
