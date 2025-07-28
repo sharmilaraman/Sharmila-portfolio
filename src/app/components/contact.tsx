@@ -118,6 +118,17 @@ export default function Contact() {
                 <p className="text-secondary">Chennai,India</p>
               </div>
             </motion.div>
+            <motion.div 
+              className="flex items-center gap-4"
+              variants={fadeInUp}
+              whileHover={{ x: 10 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <span className="h-6 w-6 text-primary">💼</span>
+              <div>
+                <p className="text-secondary">Seeking full-time office position</p>
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
         

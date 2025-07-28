@@ -3,7 +3,7 @@ export const projects: Project[] = [
     {
         title: 'E-commerce Platform',
         description: 'A Frontend-integration Shop,Co  e-commerce platform built with React.js js, JavaScript, and Tailwind CSS.',
-        technologies: ['React.js.js', 'JavaScript', 'Tailwind CSS'],
+        technologies: ['React.js', 'JavaScript', 'Tailwind CSS'],
         githubLink: 'https://github.com/sharmilaraman/Shop.co-E-commerce/tree/E-Commerce-Category',
         demoLink: 'https://sweet-puppy-0c3408.netlify.app/',
         image: '/projects/e-commerce.png',

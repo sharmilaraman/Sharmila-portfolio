@@ -95,10 +95,11 @@ const Main = () => {
         </motion.div>
         <motion.div className="flex flex-col md:flex-row justify-center gap-4">
           <Link
-            href="/projects"
-            className="inline-block w-full  md:w-auto text-white px-8 py-3 rounded-lg hover:bg-primary/70 transition-colors bg-primary "
+            href="/projects/SHARMILA R-BE-ECE-2024.pdf"
+            download
+            className="inline-block w-full md:w-auto text-white px-4 py-3 rounded-lg hover:bg-primary/70 transition-colors bg-primary"
           >
-            View Projects
+            Download Resume
           </Link>
           <Link
             href="/contact"
