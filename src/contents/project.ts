@@ -25,6 +25,15 @@ export const projects: Project[] = [
         image: '/projects/weather-app.png',
       },
       {
+        title: 'Restaurant Food Delivery App',
+        description: 'Responsive restaurant website UI design with React Next.js and Tailwind CSS',
+        technologies: ['Next.js', 'Tailwind CSS','CSS'],
+        githubLink: 'https://github.com/sharmilaraman/WeatherApp',
+        demoLink: 'https://food-com-mauve.vercel.app/',
+        image: '/projects/foodapp.png',
+      },
+      
+      {
         title: 'CRUD Operation App',
         description: 'A CRUD (Create, Read, Update, Delete) application built with React.js.js to manage user data efficiently.',
         technologies: ['React.js', 'json Placeholder  API','CSS'],
