@@ -19,6 +19,12 @@ export const skills: Skills[] = [
       "Built fast and responsive UI components using Tailwind CSS utility classes, ensuring consistent styling across projects.",
     image: "/projects/tailwind2.png",
   },
+   {
+  title: "Shadcn UI",
+  description: "A modern, headless component toolkit built with Tailwind CSS,offering complete control, accessibility, and customizability for React projects.",
+  image: "/projects/shadcn1.png",
+}
+,
   {
     title: "JavaScript",
     description:
