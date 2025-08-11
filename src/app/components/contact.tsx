@@ -5,6 +5,9 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { fadeInUp, fadeIn, slideInLeft, slideInRight } from '@/utils/animations'
 import Link from 'next/link'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 interface FormData {
   name: string;
   email: string;
@@ -26,27 +29,40 @@ export default function Contact() {
     setStatus('loading')
 
     try {
-      const response = await fetch('/api/contact', {
+      const formDataToSend = new FormData()
+      formDataToSend.append('access_key', 'fcfe2901-35a0-4847-b339-4bbc567ed834')
+      formDataToSend.append('Name', formData.name)
+      formDataToSend.append('Email', formData.email)
+      formDataToSend.append('Message', formData.message)
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        body: formDataToSend
       })
 
-      if (!response.ok) throw new Error('Failed to send message')
-      
-      setStatus('success')
-      setFormData({ name: '', email: '', message: '' })
-    } catch {
+      const data = await response.json()
+
+      if (data.success) {
+        setStatus('success')
+        toast.success('Message sent successfully!')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        console.log('Error', data)
+        toast.error(data.message || 'Failed to send message')
+        setStatus('error')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      toast.error('Failed to send message. Please try again.')
       setStatus('error')
     }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const fieldName = e.target.name.toLowerCase()
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [fieldName]: e.target.value
     }))
   }
 
@@ -151,7 +167,7 @@ export default function Contact() {
               <input
                 type="text"
                 id="name"
-                name="name"
+                name="Name"
                 placeholder='Enter your name'
                 value={formData.name}
                 onChange={handleChange}
@@ -167,7 +183,7 @@ export default function Contact() {
               <input
                 type="email"
                 id="email"
-                name="email"
+                name="Email"
                 placeholder='Enter your email'
                 value={formData.email}
                 onChange={handleChange}
@@ -182,7 +198,7 @@ export default function Contact() {
               </label>
               <textarea
                 id="message"
-                name="message"
+                name="Message"
                 placeholder='Enter a message'
                 value={formData.message}
                 onChange={handleChange}
